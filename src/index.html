@@ -3,9 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog Angular</title>
+  <title>Blog de Astronomia</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <app-root></app-root>
+
+  <!-- Cabeçalho -->
+  <header>
+    <div class="container">
+      <h1>Blog de Astronomia</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Início</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Explorando o Universo</h2>
+        <p>Descubra o cosmos, estrelas, planetas e muito mais!</p>
+      </div>
+    </section>
+
+    <section class="posts">
+      <div class="container">
+        <article class="post">
+          <img src="https://via.placeholder.com/400x300?text=Imagem+de+Astronomia" alt="Imagem Astronômica">
+          <h3>O Mistério dos Buracos Negros</h3>
+          <p>Os buracos negros são um dos maiores mistérios do universo. Vamos entender como eles se formam e o que acontece quando algo entra em um buraco negro...</p>
+          <a href="#">Leia mais</a>
+        </article>
+
+        <article class="post">
+          <img src="https://via.placeholder.com/400x300?text=Imagem+de+Astronomia" alt="Imagem Astronômica">
+          <h3>Viagem ao Planeta Marte</h3>
+          <p>Marte, o quarto planeta do sistema solar, tem fascinado cientistas por décadas. Quais são os planos para futuras missões tripuladas?</p>
+          <a href="#">Leia mais</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Blog de Astronomia. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
 </body>
 </html>

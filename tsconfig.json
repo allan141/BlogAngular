@@ -1,8 +1,15 @@
 {
-    "extends": "./tsconfig.base.json",
-    "compilerOptions": {
-      "outDir": "./dist/out-tsc"
-    },
-    "files": ["src/main.ts", "src/polyfills.ts"]
-  }
-  
+  "compilerOptions": {
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "module": "es2020",
+    "moduleResolution": "node",
+    "target": "es2022",
+    "lib": ["es2020", "dom"],
+    "forceConsistentCasingInFileNames": true,
+    "strict": true
+  },
+  "files": ["src/main.ts"],
+  "include": ["src/**/*.d.ts"]
+}
