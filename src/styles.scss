@@ -1,131 +1,230 @@
-/* Estilos Globais */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #010b13;
+  color: #fff;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+header {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 30px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header h1 {
+  font-size: 36px;
+  color: #f5a623;
+  letter-spacing: 2px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+
+header nav ul li {
+  margin-left: 30px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  position: relative;
+}
+
+header nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #f5a623;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease;
+}
+
+header nav ul li a:hover::after {
+  width: 100%;
+}
+
+.hero {
+  background: url('https://images.unsplash.com/photo-1506765515386-5f2b5d3803f3') no-repeat center center/cover;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.hero-text {
+  z-index: 2;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.hero h2 {
+  font-size: 60px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+
+.hero h2 {
+  animation: fadeInUp 1.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
   }
-  
-  body {
-    background-color: #001e30;
-    color: #fff;
-    line-height: 1.6;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  /* Cabeçalho */
-  header {
-    background-color: #001f2d;
-    padding: 20px 0;
+}
+
+.posts {
+  padding: 80px 0;
+  background-color: #001e30;
+  background-image: linear-gradient(145deg, #002b44, #010f19);
+}
+
+.posts .container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.post {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 48%;
+  margin-bottom: 30px;
+  padding: 25px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.post:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.post img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+}
+
+.post:hover img {
+  transform: scale(1.05);
+}
+
+.post h3 {
+  margin-top: 20px;
+  font-size: 28px;
+  color: #f5a623;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.post p {
+  margin: 15px 0;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.post a {
+  color: #f5a623;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.post a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #001e30;
+  padding: 40px 0;
+  text-align: center;
+  font-size: 14px;
+  color: #888;
+  position: relative;
+}
+
+footer p {
+  margin-top: 10px;
+}
+
+footer a {
+  color: #f5a623;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .header {
+    text-align: center;
   }
-  
-  header .container {
-    display: flex;
-    justify-content: space-between;
+
+  .posts .container {
+    flex-direction: column;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
   }
-  
-  header h1 {
-    font-size: 36px;
-    color: #f5a623;
+
+  .post {
+    width: 90%;
   }
-  
-  header nav ul {
-    list-style: none;
+
+  .hero h2 {
+    font-size: 40px;
   }
-  
-  header nav ul li {
-    display: inline;
-    margin-left: 20px;
-  }
-  
-  header nav ul li a {
-    color: #f5a623;
-    text-decoration: none;
+
+  .hero p {
     font-size: 18px;
   }
-  
-  header nav ul li a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Seção Hero */
-  .hero {
-    background: url('https://via.placeholder.com/1200x600?text=Universo') no-repeat center center/cover;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-  }
-  
-  .hero h2 {
-    font-size: 48px;
-    margin-bottom: 10px;
-  }
-  
-  .hero p {
-    font-size: 24px;
-  }
-  
-  /* Seção de Posts */
-  .posts {
-    padding: 50px 0;
-    background-color: #003a4d;
-  }
-  
-  .posts .container {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-  }
-  
-  .post {
-    background-color: #002133;
-    width: 48%;
-    margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  }
-  
-  .post img {
-    width: 100%;
-    border-radius: 8px;
-  }
-  
-  .post h3 {
-    margin-top: 15px;
-    font-size: 24px;
-    color: #f5a623;
-  }
-  
-  .post p {
-    margin: 10px 0;
-  }
-  
-  .post a {
-    color: #f5a623;
-    text-decoration: none;
-  }
-  
-  .post a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Rodapé */
-  footer {
-    background-color: #001f2d;
-    padding: 20px 0;
-    text-align: center;
-  }
-  
-  footer p {
-    color: #888;
-    font-size: 14px;
-  }
+}

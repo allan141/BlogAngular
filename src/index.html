@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Blog de Astronomia - Explore o universo, estrelas, planetas e muito mais!">
+  <meta name="keywords" content="Astronomia, Universo, Buracos Negros, Planetas, Estrelas">
   <title>Blog de Astronomia</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -23,28 +26,37 @@
     </div>
   </header>
 
-  <!-- Conteúdo Principal -->
-  <main>
-    <section class="hero">
-      <div class="hero-text">
-        <h2>Explorando o Universo</h2>
-        <p>Descubra o cosmos, estrelas, planetas e muito mais!</p>
-      </div>
-    </section>
+  <!-- Seção Hero -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Explorando o Universo</h2>
+      <p>Descubra o cosmos, estrelas, planetas e muito mais!</p>
+      <a href="#posts" class="btn">Explorar</a>
+    </div>
+  </section>
 
-    <section class="posts">
+  <!-- Seção de Posts -->
+  <main>
+    <section class="posts" id="posts">
       <div class="container">
         <article class="post">
-          <img src="https://via.placeholder.com/400x300?text=Imagem+de+Astronomia" alt="Imagem Astronômica">
+          <img src="https://www.nasa.gov/sites/default/files/thumbnails/blackhole-6.jpg" alt="Buraco Negro">
           <h3>O Mistério dos Buracos Negros</h3>
           <p>Os buracos negros são um dos maiores mistérios do universo. Vamos entender como eles se formam e o que acontece quando algo entra em um buraco negro...</p>
           <a href="#">Leia mais</a>
         </article>
 
         <article class="post">
-          <img src="https://via.placeholder.com/400x300?text=Imagem+de+Astronomia" alt="Imagem Astronômica">
+          <img src="https://images.unsplash.com/photo-1506765515386-5f2b5d3803f3" alt="Imagem do Universo">
           <h3>Viagem ao Planeta Marte</h3>
           <p>Marte, o quarto planeta do sistema solar, tem fascinado cientistas por décadas. Quais são os planos para futuras missões tripuladas?</p>
+          <a href="#">Leia mais</a>
+        </article>
+
+        <article class="post">
+          <img src="https://images.unsplash.com/photo-1504330463062-c74e7cc31a3d" alt="Estrela no espaço">
+          <h3>A Vida das Estrelas</h3>
+          <p>As estrelas têm um ciclo de vida fascinante que vai desde o nascimento até a morte. Vamos explorar como elas se formam e o que acontece no final da sua jornada.</p>
           <a href="#">Leia mais</a>
         </article>
       </div>
@@ -55,6 +67,10 @@
   <footer>
     <div class="container">
       <p>&copy; 2025 Blog de Astronomia. Todos os direitos reservados.</p>
+      <div>
+        <a href="#">Política de Privacidade</a> | 
+        <a href="#">Termos de Serviço</a>
+      </div>
     </div>
   </footer>
 
