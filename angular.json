@@ -1,0 +1,32 @@
+{
+    "version": 1,
+    "projects": {
+      "blog-angular": {
+        "root": "",
+        "sourceRoot": "src",
+        "architect": {
+          "build": {
+            "options": {
+              "outputPath": "dist/blog-angular",
+              "index": "src/index.html",
+              "main": "src/main.ts",
+              "polyfills": "src/polyfills.ts",
+              "tsConfig": "tsconfig.app.json",
+              "assets": ["src/assets"],
+              "styles": ["src/styles.scss"],
+              "scripts": []
+            }
+          },
+          "serve": {
+            "options": {
+              "browserTarget": "blog-angular:build"
+            }
+          }
+        }
+      }
+    },
+    "cli": {
+      "analytics": "54ab0e4f-3d66-44d6-a7d2-47c22bb59cdd"
+    }
+  }
+  
